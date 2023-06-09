@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<<device-width>>, initial-scale=1.0">
+    <title>Blog/Vinueza/Melany</title>
+    <link rel=StyleSheet href="style.css">
+</head>
+<body>
+    <header>
+        <img src="nav blog.png" width="1350" height="400">
+    </header>
+  <script>
+    // Función para cambiar de pestaña
+    function changeTab(tabId) {
+      var tabs = document.getElementsByClassName('tab');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+      }
+
+      var tabContent = document.getElementById(tabId);
+      tabContent.classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <!-- Estructura del menú de pestañas -->
+  <nav>
+  <ul class="tab-menu">
+    <li><a href="#" onclick="changeTab('tab1')">Sobre mi</a></li>
+    <li><a href="#" onclick="changeTab('tab2')">Habilidades</a></li>
+    <li><a href="#" onclick="changeTab('tab3')">Contactos</a></li>
+  </ul>
+</nav>
+
+  <!-- Contenido de las pestañas -->
+<main class="contenedor">
+ <!--Contenido de la pestaña 1--> 
+  <div id="tab1" class="tab active">
+    <aside>
+     <div class="container">
+      <div id="detalles">
+        <h1>SOBRE MI</h1>
+        <p style="width: 400px;"> 
+            ¡Bienvenido a mi blog!.Soy estudiante universitaria de la Universidad de las Fuerzas Armadas ESPE, 
+            en la carrera de Ingenieria en Tecnologías de la información TI.
+        </p>
+        <h4>Quieres saber un poco mas?...</h4>
+        <p style="width: 400px;"> 
+            En mis ratos libres me gusta escuchar música, bailar y dibujar.
+            Tambien me gusta mucho salir a caminar, ir al cine o salir por un helado.
+        </p>
+        <p style="width: 400px;">
+          Soy una joven independiente y muy trabajadora, honesta y muy
+          divertida. 
+      </p>
+      <p style="width: 400px;">
+        Actualmente tengo 24 años y recido en Ecuador, un país muy maravilloso.
+     </p>
+      </div>
+      <section class="imagenes"></section> 
+      <div class="box">
+     <img src="foto.jpeg" width="300" height="350" >
+       </div>
+      </section>
+    </aside>
+</div>
+<!-- Contenido de la pestaña 2-->
+  <div id="tab2" class="tab">
+      <div class="container">
+        <section class="habilidades">
+      <div class="box">
+          <img src="personal.png" width="200" height="150">
+          <h4>Habilidades personales</h4>
+          <p>* Cocinar</p>
+          <p>* Bailar</p>
+      </div>
+      <div class="box">
+          <img src="estudiantil.jpg" width="200" height="150">
+          <h4>Habilidades estudiantiles</h4>
+          <p>* JAVA </p>
+          <p>* C++</p>
+          <p>* PYTON</p>
+      </div>
+      <div class="box">
+        <img src="creatividad.jpg" width="200" height="150">
+        <h4>Habilidades creativas</h4>
+        <p>* Dibujar</p>
+        <p>* Pintar</p>
+    </div>
+  </div>
+  </section>
+    </div>
+<!--Contenido de la pestaña 3-->
+  <div id="tab3" class="tab">
+    <div class="container">
+    <aside>
+      <div class="Formulario">
+          <form action="guardar-dato.php" method="post"><!--Aqui se guardara la informacion del formulario-->
+              <div class="Container">
+                  <div id="detalles">
+                      <h3>Ingresa tus datos</h3>
+                      <div class="bloque">
+                          <label for="nombre">Nombre y apellido</label>
+                          <input type="text" name="nombre" id="nombre" placeholder=" EJ.Maria Lopez"
+                              pattern="[a-zA-Z ]+" required>
+                      </div>
+                      <div class="bloque">
+                          <label for="Telefono">Telefono</label>
+                          <input type="text" maxlength="10" name="telefono" id="telefono" placeholder="Eg. 0958455161"
+                              required>
+                      </div>
+                      <div class="bloque">
+                          <label for="email">Email</label>
+                          <input type="email" name="email" id="email" placeholder=" example@domain.com" required>
+                      </div>
+                      <label for="genero" class="titulo_genero">
+                        <h3>Actualmente recides en Ecuador?</h3>
+                    </label>
+                    <label><input type="radio" name="recide" id="recide" value="Si">Si</label>
+                    <label><input type="radio" name="recide" id="recide" value="No">No</label>
+                  <div class="mensaje">
+                      <h3>Deseas dejar algun mensaje?</h3>
+                      <div class="bloque">
+                          <label for="mensaje"></label>
+                          <textarea name="mensaje" id="mensaje" cols="50" rows="5"></textarea>
+                      </div>  
+                  </div>
+                  <button type="submit">Enviar</button>
+              </div>
+          </form>
+  </aside>
+  <section class="contactos">
+          <div class="box1">
+            <h4>Contactame en mis redes sociales</h4>
+            <a href="https://www.facebook.com/melany.vinueza/" target="_blank"><img src="iconofb.png" width="60" height="60" ></a>
+            <a href="https://www.instagram.com/melaanahi/" target="_blank"><img src="iconoins.png" width="60" height="60" ></a>
+            <a href="https://api.whatsapp.com/send?phone=0958744171text= Hola quiero conocerte" target="_blank"><img src="iconowht.png" width="60" height="60" ></a>
+           </div>
+           
+  </section>
+</div>
+  </div>
+</main>
+<footer>
+  ©Universidad de las Fuerzas Armadas Espe
+</footer>
+</body>
+</html>
